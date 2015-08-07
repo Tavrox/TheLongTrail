@@ -9,7 +9,6 @@ public class LineMarker : MonoBehaviour
 	void Start()
 	{
 		Colli = GetComponent<BoxCollider>();
-		Debug.Log ("start test git");
 	}
 
 	void OnTriggerEnter(Collider _coll)
