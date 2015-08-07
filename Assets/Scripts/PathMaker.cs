@@ -6,11 +6,11 @@ using System.Linq;
 public class PathMaker : MonoBehaviour 
 {
 	public List<LineMarker> LineList;
-	LevelManager Manager;
+	//LevelManager Manager;
 
 	public PathMaker Setup (LevelManager _man)
 	{
-		Manager = _man;
+		//Manager = _man;
 		LineList =  GetComponentsInChildren<LineMarker>().ToList();
 		return this;
 	}

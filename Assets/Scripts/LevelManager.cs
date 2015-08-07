@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour {
 	public PathMaker Path;
 	public Camera Cam;
 	public Light secondLight;
+	public Canvas UI;
 
 	public Color primaryColor; // Ambient lighting
 	public Color secondaryColor; // Second lighting >> second light
@@ -25,6 +26,7 @@ public class LevelManager : MonoBehaviour {
 		Path =  GetComponentInChildren<PathMaker>().Setup(this);
 		Charac =  GetComponentInChildren<CharacterManager>().Setup(this);
 		Cam = Camera.main;
+		UI = FindObjectOfType<Canvas>();
 		changeLighting();
 	}
 
@@ -35,12 +37,19 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	void Update () {
+
+
+		Vector3 dir = Vector3.RotateTowards(UI.transform.position, Camera.main.transform.position - UI.transform.position, 30f, 0f);
+		UI.transform.rotation = Quaternion.LookRotation(dir);
+		Debug.DrawRay(transform.position, dir);
+
 		Vector3 padding =  Cam.transform.position - Charac.transform.position;
 		Cam.transform.position = Charac.transform.position + padding; 
 	}
 
+	/*
 	void OnDrawGizmos()
 	{		
 		changeLighting();
-	}
+	}*/
 }

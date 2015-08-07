@@ -42,7 +42,7 @@ public class CharacterManager : MonoBehaviour {
 
 		lookKeys ();
 		applyForces ();
-		Debug.Log(CurrentMarker.transform.position);
+		//Debug.Log(CurrentMarker.transform.position);
 		transform.position = Vector3.MoveTowards(transform.position, CurrentMarker.transform.position, maxSpeed * Time.deltaTime);
 		if (!OnStairs)
 		{
