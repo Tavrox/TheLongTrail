@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UIManager : MonoBehaviour {
+public class UIManager : MonoBehaviour 
+{
 
 	// Use this for initialization
 	void Start () {
@@ -11,5 +12,15 @@ public class UIManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void setWalk()
+	{
+
+	}
+
+	void setRun()
+	{
+
 	}
 }

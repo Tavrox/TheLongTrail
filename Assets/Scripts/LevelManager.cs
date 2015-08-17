@@ -33,13 +33,13 @@ public class LevelManager : MonoBehaviour {
 	public void changeLighting()
 	{
 		RenderSettings.ambientLight = primaryColor;
-		secondLight.color = secondaryColor;
+		//secondLight.color = secondaryColor;
 	}
 
 	void Update () {
 
 
-		Vector3 dir = Vector3.RotateTowards(UI.transform.position, Camera.main.transform.position - UI.transform.position, 30f, 0f);
+		Vector3 dir = Vector3.RotateTowards(UI.transform.position, Camera.main.transform.position - UI.transform.position, 30f, 50f);
 		UI.transform.rotation = Quaternion.LookRotation(dir);
 		Debug.DrawRay(transform.position, dir);
 
