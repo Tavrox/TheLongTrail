@@ -1,7 +1,7 @@
 # thelongtrail
 An open source game about running to show my coding skills.
 <p>
-A minimalistic mantra video game for indie game developers.<br />
+<strong>A minimalistic mantra video game for indie game developers.</strong><br />
 		Game by <a href="https://twitter.com/Tavrox_">@Tavrox_</a><br />
 		Open source game Github<br />
 		>> Only free assets found on the web<br />
